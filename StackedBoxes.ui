@@ -64,6 +64,27 @@
         </widget>
        </item>
        <item>
+        <widget class="QPushButton" name="action6">
+         <property name="text">
+          <string>(0,0) &lt;-- Red</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="action7">
+         <property name="text">
+          <string>(0,0) &lt;-- Green</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="action8">
+         <property name="text">
+          <string>(0,0) &lt;-- Blue</string>
+         </property>
+        </widget>
+       </item>
+       <item>
         <spacer name="verticalSpacer">
          <property name="orientation">
           <enum>Qt::Vertical</enum>

@@ -14,9 +14,9 @@ StackedBoxes::StackedBoxes(QWidget *parent) :
     ui->graphicsView->setScene( scene );
     ui->graphicsView->setSceneRect( -100, -100, 200, 200 );
 
-    bbR = new BigBox( 100, 100, Qt::red );
-    bbG = new BigBox(  50,  50, Qt::green );
-    bbB = new BigBox(  25,  25, Qt::blue, bbG );
+    bbR = new BigBox( 100, 100, QColor( 255,   0,   0, 128 ) );
+    bbG = new BigBox(  50,  50, QColor(   0, 255,   0, 128 ) );
+    bbB = new BigBox(  25,  25, QColor(   0,   0, 255, 128 ), bbG );
 
     scene->addItem( bbR );
     scene->addItem( bbG );
@@ -56,6 +56,21 @@ void StackedBoxes::on_action4_clicked()
 void StackedBoxes::on_action5_clicked()
 {
     bbG->setParentItem( 0 );
+}
+
+void StackedBoxes::on_action6_clicked()
+{
+    bbR->setPos( 0, 0 );
+}
+
+void StackedBoxes::on_action7_clicked()
+{
+    bbG->setPos( 0, 0 );
+}
+
+void StackedBoxes::on_action8_clicked()
+{
+    bbB->setPos( 0, 0 );
 }
 
 void StackedBoxes::showPosition()

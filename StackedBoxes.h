@@ -24,12 +24,13 @@ private slots:
     void on_action1_clicked();
     void on_action2_clicked();
     void on_Action3_clicked();
+    void on_action4_clicked();
+    void on_action5_clicked();
+    void on_action6_clicked();
+    void on_action7_clicked();
+    void on_action8_clicked();
 
     void showPosition();
-
-    void on_action4_clicked();
-
-    void on_action5_clicked();
 
 private:
     Ui::StackedBoxes *ui;

@@ -24,8 +24,8 @@ protected:
     void mouseReleaseEvent(QGraphicsSceneMouseEvent *event);
 
 private:
-    int _height;
-    int _width;
+    qreal _height;
+    qreal _width;
     QColor _color;
 
 public:

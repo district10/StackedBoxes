@@ -16,8 +16,8 @@ BigBox::BigBox( int width, int height, QColor color, QGraphicsItem *parent)
 
 QRectF BigBox::boundingRect() const
 {
-    const static int padding = 2;
-    return QRectF( -_width/2-padding, -_height/2+padding,
+    const static int padding = 8;
+    return QRectF( -_width/2-padding, -_height/2-padding,
                    +_width  +padding, +_height  +padding );
 }
 
@@ -40,8 +40,8 @@ void BigBox::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QW
     px = p.x();
     py = p.y();
 
-    painter->setPen( QPen( QBrush(_color), 3 ) );
-    painter->drawRect( QRect( -_width/2, -_height/2, _width, _height ) );
+    painter->setBrush( _color );
+    painter->drawRect( QRectF( -_width/2, -_height/2, _width, _height ) );
 }
 
 void BigBox::mousePressEvent(QGraphicsSceneMouseEvent *event)
